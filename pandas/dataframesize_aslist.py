@@ -9,8 +9,6 @@ def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
     return employees.head(3)
 
 # Return name and age of a particular student
-import pandas as pd
-
 def selectData(students: pd.DataFrame) -> pd.DataFrame:
     return students[students.student_id == 101][['name', 'age']]
     
