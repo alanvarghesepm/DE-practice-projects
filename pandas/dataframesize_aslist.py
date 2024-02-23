@@ -12,3 +12,16 @@ def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
 def selectData(students: pd.DataFrame) -> pd.DataFrame:
     return students[students.student_id == 101][['name', 'age']]
     
+# A company plans to provide its employees with a bonus.
+# Write a solution to create a new column name bonus that contains the doubled values of the salary column.
+# DataFrame employees
+# +-------------+--------+
+# | Column Name | Type.  |
+# +-------------+--------+
+# | name        | object |
+# | salary      | int.   |
+# +-------------+--------+
+def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
+    employees.loc[:,'bonus'] = 2*employees.loc[:,'salary']
+    return employees
+    
